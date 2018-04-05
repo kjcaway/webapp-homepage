@@ -1,33 +1,60 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {NavLink} from 'react-router-dom';
+import $ from 'jquery';
 
 class Left extends React.Component {
+  componentDidMount() {
+    $(function() {
+      let $window = $(window);
+      // let $head = $('head');
+      // let $body = $('body');
+
+      // Menu.
+      let $menu = $('#menu');
+      let $menuOpener = $menu.children('ul').find('.opener');
+
+      // Openers.
+      $menuOpener.each(function() {
+        let $this = $(this);
+
+        $this.on('click', function(event) {
+          // Prevent default.
+          event.preventDefault();
+
+          // Toggle.
+          $menuOpener.not($this).removeClass('active');
+          $this.toggleClass('active');
+
+          // Trigger resize (sidebar lock).
+          $window.triggerHandler('resize.sidebar-lock');
+        });
+      });
+    });
+  }
   render() {
     return (<div id="sidebar">
-      <div class="inner">
+      <div className="inner">
 
-        <section id="search" class="alt">
+        <section id="search" className="alt">
           <form method="post" action="#">
             <input type="text" name="query" id="query" placeholder="Search"/>
           </form>
         </section>
 
         <nav id="menu">
-          <header class="major">
+          <header className="major">
             <h2>Menu</h2>
           </header>
           <ul>
             <li>
-              <a href="index.html">Homepage</a>
+              <NavLink to="/">Main</NavLink>
             </li>
             <li>
-              <a href="generic.html">Generic</a>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <a href="elements.html">Elements</a>
-            </li>
-            <li>
-              <span class="opener">Submenu</span>
+              <span className="opener">Submenu</span>
               <ul>
                 <li>
                   <a href="#">Lorem Dolor</a>
@@ -42,44 +69,12 @@ class Left extends React.Component {
                   <a href="#">Feugiat Veroeros</a>
                 </li>
               </ul>
-            </li>
-            <li>
-              <a href="#">Etiam Dolore</a>
-            </li>
-            <li>
-              <a href="#">Adipiscing</a>
-            </li>
-            <li>
-              <span class="opener">Another Submenu</span>
-              <ul>
-                <li>
-                  <a href="#">Lorem Dolor</a>
-                </li>
-                <li>
-                  <a href="#">Ipsum Adipiscing</a>
-                </li>
-                <li>
-                  <a href="#">Tempus Magna</a>
-                </li>
-                <li>
-                  <a href="#">Feugiat Veroeros</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Maximus Erat</a>
-            </li>
-            <li>
-              <a href="#">Sapien Mauris</a>
-            </li>
-            <li>
-              <a href="#">Amet Lacinia</a>
             </li>
           </ul>
         </nav>
 
         <footer id="footer">
-          <p class="copyright">&copy; Untitled. All rights reserved. Demo Images:
+          <p className="copyright">&copy; Untitled. All rights reserved. Demo Images:
             <a href="https://unsplash.com">Unsplash</a>. Design:
             <a href="https://html5up.net">HTML5 UP</a>.</p>
         </footer>
