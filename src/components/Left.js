@@ -7,8 +7,19 @@ class Left extends React.Component {
   componentDidMount() {
     $(function() {
       let $window = $(window);
+      let $sidebar = $('#sidebar');
       // let $head = $('head');
       // let $body = $('body');
+
+      // Toggle
+      $('<a href="#sidebar" class="toggle">Toggle</a>').appendTo($sidebar).on('click', function(event) {
+        // Prevent default.
+        event.preventDefault();
+        event.stopPropagation();
+
+        // Toggle.
+        $sidebar.toggleClass('inactive');
+      });
 
       // Menu.
       let $menu = $('#menu');
@@ -48,25 +59,25 @@ class Left extends React.Component {
           </header>
           <ul>
             <li>
-              <NavLink to="/">Main</NavLink>
+              <NavLink to="/">게시판?</NavLink>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/about">About Me</NavLink>
             </li>
             <li>
-              <span className="opener">Submenu</span>
+              <span className="opener">하위메뉴</span>
               <ul>
                 <li>
-                  <a href="#">Lorem Dolor</a>
+                  <a href="#">1111</a>
                 </li>
                 <li>
-                  <a href="#">Ipsum Adipiscing</a>
+                  <a href="#">2222</a>
                 </li>
                 <li>
-                  <a href="#">Tempus Magna</a>
+                  <a href="#">3333</a>
                 </li>
                 <li>
-                  <a href="#">Feugiat Veroeros</a>
+                  <a href="#">4444</a>
                 </li>
               </ul>
             </li>
@@ -80,6 +91,7 @@ class Left extends React.Component {
         </footer>
 
       </div>
+
     </div>);
   }
 }

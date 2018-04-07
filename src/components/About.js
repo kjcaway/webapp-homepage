@@ -20,6 +20,8 @@ class About extends React.Component {
             </ul>
           </header>
           <p>안녕하세요~ kang입니다</p>
+          <p>뚜뚜ㅜ후</p>
+
 
         </div>
       </div>

@@ -45,6 +45,16 @@ class Main extends React.Component {
                   </li>
                 </ul>
               </article>
+              <article>
+                <a href="#" className="image"><img src="images/pic03.jpg" alt=""/></a>
+                <h3>Nulla amet dolore</h3>
+                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                <ul className="actions">
+                  <li>
+                    <a href="#" className="button">More</a>
+                  </li>
+                </ul>
+              </article>
             </div>
           </section>
 
