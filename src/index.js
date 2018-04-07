@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import './files/scss/main.scss';
 import './files/css/index.css';
-import './files/scss/_menu.scss';
+
 
 import {Left, Main, About} from './components';
-// import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
   <Router>
@@ -19,4 +19,3 @@ ReactDOM.render(
   </Router>
   , document.getElementById('root')
 );
-// registerServiceWorker();
