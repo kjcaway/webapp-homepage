@@ -1,48 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
-import $ from 'jquery';
 
 class Left extends React.Component {
-  componentDidMount() {
-    $(function() {
-      let $window = $(window);
-      let $sidebar = $('#sidebar');
-      // let $head = $('head');
-      // let $body = $('body');
-
-      // Toggle
-      $('<a href="#sidebar" class="toggle">Toggle</a>').appendTo($sidebar).on('click', function(event) {
-        // Prevent default.
-        event.preventDefault();
-        event.stopPropagation();
-
-        // Toggle.
-        $sidebar.toggleClass('inactive');
-      });
-
-      // Menu.
-      let $menu = $('#menu');
-      let $menuOpener = $menu.children('ul').find('.opener');
-
-      // Openers.
-      $menuOpener.each(function() {
-        let $this = $(this);
-
-        $this.on('click', function(event) {
-          // Prevent default.
-          event.preventDefault();
-
-          // Toggle.
-          $menuOpener.not($this).removeClass('active');
-          $this.toggleClass('active');
-
-          // Trigger resize (sidebar lock).
-          $window.triggerHandler('resize.sidebar-lock');
-        });
-      });
-    });
-  }
   render() {
     return (<div id="sidebar">
       <div className="inner">
