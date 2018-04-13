@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 const autoprefixer = require('autoprefixer');
@@ -107,6 +108,16 @@ module.exports = {
 
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
+      {
+        test: require.resolve('../src/files/js/jquery.min.js'),
+      },
+      {
+        test: require.resolve('../src/files/js/skel.min.js')
+      },
+      {
+        test: require.resolve('../src/files/js/util.js'),
+        use: 'imports-loader?jQuery=jquery'
+      },
       {
         test: require.resolve('../src/files/js/main.js'),
         use: 'imports-loader?jQuery=jquery'
