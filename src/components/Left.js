@@ -19,7 +19,7 @@ class Left extends React.Component {
           </header>
           <ul>
             <li>
-              <NavLink to="/">게시판?</NavLink>
+              <NavLink to="/" >게시판</NavLink>
             </li>
             <li>
               <NavLink to="/about">About Me</NavLink>
@@ -49,9 +49,8 @@ class Left extends React.Component {
             <a href="https://unsplash.com">Unsplash</a>. Design:
             <a href="https://html5up.net">HTML5 UP</a>.</p>
         </footer>
-
+        
       </div>
-
     </div>);
   }
 }
