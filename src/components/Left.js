@@ -44,12 +44,16 @@ class Left extends React.Component {
           </ul>
         </nav>
 
+        <ul class="actions">
+          <li><NavLink to="/login" className="button">로그인</NavLink></li>
+          <li><NavLink to="/" className="button">회원가입</NavLink></li>
+        </ul>
         <footer id="footer">
           <p className="copyright">&copy; Untitled. All rights reserved. Demo Images:
             <a href="https://unsplash.com">Unsplash</a>. Design:
             <a href="https://html5up.net">HTML5 UP</a>.</p>
         </footer>
-        
+
       </div>
     </div>);
   }

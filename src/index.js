@@ -9,7 +9,7 @@ import './files/css/index.css';
 import './files/js/util.js';
 import './files/js/main.js';
 
-import {Left, Main, About} from './components';
+import {Left, Main, About, Login} from './components';
 
 ReactDOM.render(
   <Router>
@@ -17,6 +17,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={Main}/>
         <Route path="/about" component={About}/>
+        <Route path="/login" component={Login}/>
       </Switch>
       <Left />
     </div>
