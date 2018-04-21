@@ -20,7 +20,7 @@ class Login extends React.Component {
 
             <ul className="actions">
               <li><a href="#" className="button special">로그인</a></li>
-              <li><a href="#" className="button">가입</a></li>
+              <li><a href="#" className="button">회원가입</a></li>
             </ul>
           </div>
         </div>

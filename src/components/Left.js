@@ -24,7 +24,7 @@ class Left extends React.Component {
             <li>
               <NavLink to="/about">About Me</NavLink>
             </li>
-            <li>
+            <li style={{display:"none"}}>
               <span className="opener">하위메뉴</span>
               <ul>
                 <li>
@@ -44,7 +44,7 @@ class Left extends React.Component {
           </ul>
         </nav>
 
-        <ul class="actions">
+        <ul className="actions">
           <li><NavLink to="/login" className="button">로그인</NavLink></li>
           <li><NavLink to="/" className="button">회원가입</NavLink></li>
         </ul>
