@@ -6,7 +6,7 @@ import api from './routes';
 const app = express();
 
 let port = 3000;
-
+// 되나?
 
 // SETUP MIDDLEWARE
 app.use(bodyParser.json());
