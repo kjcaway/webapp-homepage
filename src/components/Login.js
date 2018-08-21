@@ -9,20 +9,21 @@ class Login extends React.Component {
         <div className="inner">
           <Header title="Login"/>
           <h2>로그인</h2>
-          <div className="row uniform 200%">
-            <div className="6u 12u$(xsmall)">
-              <input type="text" name="userid" id="userid" value="" placeholder="User ID" />
-            </div>
+          <form id="loginform" method="post" action="#">
+            <div className="row uniform 100%">
+                <div className="6u 12u$(xsmall)">
+                  <input type="text" name="userid" id="userid"  placeholder="User ID" />
+                </div>
 
-            <div className="6u 12u$(xsmall)">
-              <input type="password" name="password" id="password" value="" placeholder="Password" />
+                <div className="6u 12u$(xsmall)">
+                  <input type="password" name="password" id="password"  placeholder="Password" />
+                </div>
+              <ul className="actions">
+                <li><a href="#" className="button special">로그인</a></li>
+                <li><a href="#" className="button">회원가입</a></li>
+              </ul>
             </div>
-
-            <ul className="actions">
-              <li><a href="#" className="button special">로그인</a></li>
-              <li><a href="#" className="button">회원가입</a></li>
-            </ul>
-          </div>
+          </form>
         </div>
       </div>
     );
